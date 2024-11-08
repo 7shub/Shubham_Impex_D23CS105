@@ -1,0 +1,203 @@
+/* ************ GOOGLE FONTS ************  */
+@import url('https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ************ GENERAL STYLES ************  */
+
+:root {
+  --focus-color: #2544d3;
+  --bg-color: #dfe5ef;
+  --box-color: #d8e1e8;
+  --text-color: #afb0b4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../image/contactus-test/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ************ CONTACT US SECTION ************  */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container {
+  width: 80vh;
+  max-width: 750px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+/* ************ ASIDE ************  */
+.aside {
+  position: relative;
+  width: 100%;
+  padding: 40px 35px;
+  background-image: url(../image/contactus-test/sidebar.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  flex: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.aside::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(transparent 20%, #fff 90%);
+  width: 100%;
+  height: 100%;
+}
+.social-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  z-index: 1;
+}
+.social-desc {
+  font-size: 14px;
+  font-weight: 300;
+  z-index: 1;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  & .icon-box {
+    padding: 8px 10px;
+    background-color: var(--box-color);
+    font-size: 18px;
+    color: var(--text-color);
+    transition: 0.2s ease-in-out;
+  }
+}
+.icon-box:hover {
+  background-color: #0c0c0c;
+  color: var(--bg-color);
+}
+
+/* ************ MAIN ************  */
+
+.main {
+  flex: 66.6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  gap: 25px;
+  padding: 40px 35px;
+}
+.contact-text {
+  text-align: left;
+  & h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  & p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+.form-section {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.row {
+  position: relative;
+  & input,
+  textarea {
+    width: 100%;
+    padding: 25px 20px 10px 20px;
+    border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--box-color);
+  }
+  & input[type='submit'] {
+    padding: 15px;
+    background-color: var(--focus-color);
+    color: var(--box-color);
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 0;
+}
+/* ************ LABEL ANIMATION ************  */
+label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s ease-in-out;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-color);
+  padding: 0 3px;
+}
+label .message {
+  top: 20px;
+}
+.row-100 {
+  width: 100%;
+}
+.row-50 {
+  width: calc(50% - 5px);
+}
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  top: 12px;
+  font-size: 10px;
+}
+input:focus,
+textarea:focus {
+  outline: 1px solid var(--focus-color);
+}
+
+/* ************ RESPONSIVE ************  */
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .aside {
+    background-position: center;
+    align-items: center;
+    padding: 25px 100px;
+    & .social-icons {
+      justify-content: center;
+      padding-top: 10px;
+    }
+  }
+  .aside:before {
+    background: linear-gradient(transparent, #fff);
+  }
+  .main {
+    &.contact-text {
+      text-align: center;
+    }
+  }
+}

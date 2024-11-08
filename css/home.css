@@ -1,0 +1,119 @@
+/*------------------------------------------------------------------------------------------*/
+/* 1. Banner */
+/*------------------------------------------------------------------------------------------*/
+/* Banner Background and Text Colors */
+.banner {
+  background: url('../images/home/banner/banner-bg.png') no-repeat center top;
+  background-size: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+/* Banner Typography */
+.banner {
+  background-size: cover;
+}
+
+#banner-content.row {
+  padding-top: 130px;
+  padding-bottom: 100px;
+}
+
+.section-heading {
+  width: 30%;
+  margin-top: -5%;
+  margin-left: 5%;
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.banner .section-heading:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-top: 30px;
+}
+.banner h1 {
+  font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+  font-size: 82px;
+  line-height: 60px;
+  font-weight: 800;
+  color: #ffffff;
+  padding-bottom: 5%;
+}
+
+.banner h2 {
+  font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+  font-size: 52px;
+  font-weight: 300;
+  color: #111;
+  padding-bottom: 5%;
+  text-align: justify;
+}
+.banner p {
+  padding-bottom: 5%;
+  text-align: justify;
+}
+.button {
+  font-size: 25px;
+  margin: 35px 0;
+  padding: 11px 16px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  display: inline-block;
+  border-width: 3px;
+  border-style: solid;
+}
+.button {
+  font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+  font-size: 16px;
+  color: #111;
+}
+
+/* Button Color */
+.button {
+  border-color: #111;
+}
+
+/* Button Hover Color */
+.button:hover {
+  color: #d2b356;
+  border-color: #d2b356;
+}
+/*------------------------------------------------------------------------------------------*/
+/* 2. about */
+/*------------------------------------------------------------------------------------------*/
+.about {
+  margin-top: 3%;
+  display: flex;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.about .dom {
+  display: inline;
+  width: 130%;
+}
+.about .sub {
+  display: flex;
+  text-align: justify;
+  padding: 3%;
+}
+.about .sub .p1 {
+  padding: 3%;
+}
+.about .sub .p2 {
+  padding: 3%;
+}
+.about .sub .a {
+  padding: 3%;
+}
+.about .sub .b {
+  padding: 3%;
+}
+.about h3 {
+  color: #d2b356;
+}

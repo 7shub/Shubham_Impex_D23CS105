@@ -1,0 +1,89 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.about-us {
+  padding: 80px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 20px;
+}
+.bg {
+  border-radius: 2.5%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    url(../image/aboutus-test/3.jpg);
+  background-size: cover;
+}
+.text {
+  padding-left: 10%;
+}
+.about-us h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.about-us h3 {
+  font-size: 22px;
+  color: #888;
+  margin-bottom: 8px;
+}
+.about-us p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.sign img {
+  width: 40vh;
+}
+.about-us .bg img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 5%;
+  margin: 20% 0 0 20%;
+}
+.content_about .left {
+  width: 40%;
+  height: 90%;
+
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.content_about .left img {
+  height: 70%;
+  margin-right: -30px;
+  margin-bottom: -20px;
+  border-radius: 5px;
+}
+@media screen and(max-width:768px) {
+  .row {
+    flex-direction: column;
+  }
+  .flex {
+    max-width: 100%;
+  }
+  .about-us h2 {
+    font-size: 32px;
+  }
+  .about-us p {
+    font-size: 14px;
+  }
+}
